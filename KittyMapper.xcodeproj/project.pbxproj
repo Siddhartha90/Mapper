@@ -12,6 +12,7 @@
 		35EA3F761C325BFA00757464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EA3F741C325BFA00757464 /* Main.storyboard */; };
 		35EA3F781C325BFA00757464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EA3F771C325BFA00757464 /* Assets.xcassets */; };
 		35EA3F7B1C325BFA00757464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EA3F791C325BFA00757464 /* LaunchScreen.storyboard */; };
+		35EDEC681C33CF89008DD75C /* ColonyPopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EDEC671C33CF89008DD75C /* ColonyPopoverController.swift */; };
 		5B78F8C64DB1B7071383FD51 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E500F1DE8A812EAA1291571F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		35EA3F771C325BFA00757464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35EA3F7A1C325BFA00757464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35EA3F7C1C325BFA00757464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35EDEC671C33CF89008DD75C /* ColonyPopoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColonyPopoverController.swift; sourceTree = "<group>"; };
 		440EE2BC57B54FAFD7147ED6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3AABED4BEF006A44E19ECB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E500F1DE8A812EAA1291571F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 			children = (
 				35EA3F701C325BFA00757464 /* AppDelegate.swift */,
 				35EA3F721C325BFA00757464 /* ViewController.swift */,
+				35EDEC671C33CF89008DD75C /* ColonyPopoverController.swift */,
 				35EA3F741C325BFA00757464 /* Main.storyboard */,
 				35EA3F771C325BFA00757464 /* Assets.xcassets */,
 				35EA3F791C325BFA00757464 /* LaunchScreen.storyboard */,
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EA3F731C325BFA00757464 /* ViewController.swift in Sources */,
+				35EDEC681C33CF89008DD75C /* ColonyPopoverController.swift in Sources */,
 				35EA3F711C325BFA00757464 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
