@@ -31,13 +31,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fTX-uE-zsl" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="6Nq-yD-4eo"/>
                             <constraint firstItem="fTX-uE-zsl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CSi-mY-jox"/>
                             <constraint firstAttribute="trailing" secondItem="fTX-uE-zsl" secondAttribute="trailing" id="HST-QP-diI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Up-rd-9M5" secondAttribute="bottom" constant="1" id="Lof-eI-sc0"/>
-                            <constraint firstItem="fTX-uE-zsl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TeV-uS-aOj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Up-rd-9M5" secondAttribute="bottom" constant="1" id="bKH-ip-CiI"/>
                             <constraint firstItem="fTX-uE-zsl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gEX-Rb-auA"/>
+                            <constraint firstItem="fTX-uE-zsl" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="uCL-jE-IJK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Up-rd-9M5" secondAttribute="trailing" constant="-12" id="vW5-25-TRd"/>
+                            <constraint firstItem="fTX-uE-zsl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wND-Ud-p6e"/>
                         </constraints>
                     </view>
                     <connections>
@@ -57,22 +57,56 @@
                         <viewControllerLayoutGuide type="bottom" id="SR0-wr-obE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uqf-HR-2wa">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="125"/>
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="84"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo4-eC-vN0">
                                 <rect key="frame" x="20" y="20" width="174" height="30"/>
                                 <state key="normal" title="Create a new colony here"/>
+                                <connections>
+                                    <segue destination="2ya-bg-Rqr" kind="presentation" id="fDy-Wt-LGB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="250" height="125"/>
+                    <size key="freeformSize" width="225" height="84"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5F-R2-mwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="128.5"/>
+            <point key="canvasLocation" x="890.5" y="128"/>
+        </scene>
+        <!--Create Colony Controller-->
+        <scene sceneID="KyQ-Rv-vdP">
+            <objects>
+                <viewController id="2ya-bg-Rqr" customClass="CreateColonyController" customModule="KittyMapper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Oz-5P-hTy"/>
+                        <viewControllerLayoutGuide type="bottom" id="3UN-UA-I9g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="plY-ih-WBr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGu-Xz-KWt">
+                                <rect key="frame" x="282" y="271" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LWK-rX-M7D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TGu-Xz-KWt" firstAttribute="top" secondItem="9Oz-5P-hTy" secondAttribute="bottom" constant="251" id="8XP-F6-bpm"/>
+                            <constraint firstItem="TGu-Xz-KWt" firstAttribute="centerX" secondItem="plY-ih-WBr" secondAttribute="centerX" id="Oe7-tP-7aF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjh-rK-g9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="356"/>
         </scene>
     </scenes>
 </document>

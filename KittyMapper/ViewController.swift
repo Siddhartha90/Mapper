@@ -22,32 +22,54 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         
         locationManager.delegate = self
         mapView.delegate = self
+        
+        // Ask for user's location.
         locationManager.requestWhenInUseAuthorization()
         
-//        let camera = GMSCameraPosition.cameraWithLatitude(-33.86,
-//            longitude: 151.20, zoom: 6)
-//        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-//        mapView.myLocationEnabled = true
-//        self.view = mapView
-//        
-//        copyright.text = "KittyMapper©"
+        // Setup tap gesture recognizer.
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("tappedOnMap:"))
+        mapView.userInteractionEnabled = true
+        tapGesture.numberOfTapsRequired = 1
+        mapView.addGestureRecognizer(tapGesture)
+    }
+    
+    func tappedOnMap(sender: UITapGestureRecognizer) {
+        let location = sender.locationInView(self.view)
+        //        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //        UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"Pop"];
+        let vc = storyboard.instantiateViewControllerWithIdentifier("ColonyPopoverController") as! ColonyPopoverController
+        vc.modalPresentationStyle = .Popover
+        vc.preferredContentSize = CGSizeMake(200, 150)
+        
+        if let popoverController = vc.popoverPresentationController {
+            // Create popover at tapped point.
+            popoverController.delegate = self
+            popoverController.sourceRect = CGRectMake(location.x, location.y, 20, 10)
+            popoverController.sourceView = self.view
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return .None
     }
+    
+//    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+//        return true
+//    }
 
 }
 
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        
          if status == .AuthorizedWhenInUse {
             locationManager.startUpdatingLocation()
             mapView.myLocationEnabled = true
             mapView.settings.myLocationButton = true
             mapView.settings.indoorPicker = false;
-
+            mapView.settings.consumesGesturesInView = false;
          }
     }
 
@@ -60,7 +82,6 @@ extension ViewController: CLLocationManagerDelegate {
 }
 
 extension ViewController: GMSMapViewDelegate {
-    
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
         print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
         let marker = GMSMarker()
@@ -68,25 +89,6 @@ extension ViewController: GMSMapViewDelegate {
         marker.title = "Sydney"
         marker.snippet = "Australia"
         marker.map = mapView
-        
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-//        UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"Pop"];
-        let vc = storyboard.instantiateViewControllerWithIdentifier("ColonyPopoverController") as! ColonyPopoverController
-        vc.modalPresentationStyle = .Popover
-        vc.preferredContentSize = CGSizeMake(200, 150)
-        
-        if let popoverController = vc.popoverPresentationController {
-            popoverController.delegate = self
-            popoverController.sourceRect = CGRectMake(100, 150, 20, 10)
-            popoverController.sourceView = self.view
-            self.presentViewController(vc, animated: true, completion: nil)
-        }
-        
-        
-        
     }
-
 }
 
