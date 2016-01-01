@@ -41,16 +41,33 @@ class CreateColonyController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    @IBAction func colonyFieldEdited(sender: AnyObject) {
+        enableOrDisableDoneButton()
+    }
+    @IBAction func numberFieldEdited(sender: AnyObject) {
+        let numberOfCats = self.numberOfCatsField.text
+        if (Int(numberOfCats!) != nil) {
+            numericError.hidden = true
+        }
+
+        enableOrDisableDoneButton()
+    }
+    @IBAction func addressFieldEdited(sender: AnyObject) {
+        enableOrDisableDoneButton()
+    }
+    
+    func enableOrDisableDoneButton() {
         if (colonyNameField.hasText() && numberOfCatsField.hasText() && addressField.hasText()) {
-          doneButton.enabled = true
+            doneButton.enabled = true
         }
         else {
-        doneButton.enabled = false
+            doneButton.enabled = false
         }
-        
-        let numberOfCats = self.numberOfCatsField.text
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
         if (textField.tag == 1) {
+            let numberOfCats = self.numberOfCatsField.text
             if (Int(numberOfCats!) == nil) {
                 numericError.hidden = false
             }
@@ -60,9 +77,10 @@ class CreateColonyController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // Blink the error with a delay.
     func reshowError() {
         numericError.hidden = true
-        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "showNumericError:", userInfo: self, repeats: false)    
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "showNumericError:", userInfo: self, repeats: false)
     }
     
     func showNumericError(timer: NSTimer) {

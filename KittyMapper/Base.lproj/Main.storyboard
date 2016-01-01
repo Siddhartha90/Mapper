@@ -96,6 +96,9 @@
                                         <rect key="frame" x="25" y="134" width="176" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addressFieldEdited:" destination="2ya-bg-Rqr" eventType="editingChanged" id="0Oy-jZ-Ye4"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of cats spotted" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-Jw-Pp3">
                                         <rect key="frame" x="25" y="85" width="176" height="30"/>
@@ -104,6 +107,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="numberFieldEdited:" destination="2ya-bg-Rqr" eventType="editingChanged" id="38W-TZ-r1L"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z25-Yg-mwT">
                                         <rect key="frame" x="452" y="506" width="57" height="36"/>
@@ -123,6 +129,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="colonyFieldEdited:" destination="2ya-bg-Rqr" eventType="editingChanged" id="AWL-Uh-vwn"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Numeric value please" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EL-q9-BAK">
                                         <rect key="frame" x="215" y="63" width="138" height="21"/>
