@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3559BDD41C34F7BA00BC458B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3559BDD01C34F7BA00BC458B /* Bolts.framework */; };
+		3559BDD51C34F7BA00BC458B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3559BDD11C34F7BA00BC458B /* Parse.framework */; };
+		3559BDD61C34F7BA00BC458B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3559BDD21C34F7BA00BC458B /* ParseUI.framework */; };
+		3559BDD71C34F7BA00BC458B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3559BDD31C34F7BA00BC458B /* Pods.framework */; };
+		3559BDD91C353CE500BC458B /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3559BDD81C353CE500BC458B /* AlertController.swift */; };
 		35EA3F711C325BFA00757464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA3F701C325BFA00757464 /* AppDelegate.swift */; };
 		35EA3F731C325BFA00757464 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA3F721C325BFA00757464 /* ViewController.swift */; };
 		35EA3F761C325BFA00757464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EA3F741C325BFA00757464 /* Main.storyboard */; };
@@ -14,10 +19,14 @@
 		35EA3F7B1C325BFA00757464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EA3F791C325BFA00757464 /* LaunchScreen.storyboard */; };
 		35EDEC681C33CF89008DD75C /* ColonyPopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EDEC671C33CF89008DD75C /* ColonyPopoverController.swift */; };
 		35EDEC6A1C346A4C008DD75C /* CreateColonyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EDEC691C346A4C008DD75C /* CreateColonyController.swift */; };
-		5B78F8C64DB1B7071383FD51 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E500F1DE8A812EAA1291571F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3559BDD01C34F7BA00BC458B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts.framework"; sourceTree = "<group>"; };
+		3559BDD11C34F7BA00BC458B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse.framework"; sourceTree = "<group>"; };
+		3559BDD21C34F7BA00BC458B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Pods/../build/Debug-iphoneos/ParseUI.framework"; sourceTree = "<group>"; };
+		3559BDD31C34F7BA00BC458B /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		3559BDD81C353CE500BC458B /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		35EA3F6D1C325BFA00757464 /* KittyMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KittyMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EA3F701C325BFA00757464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35EA3F721C325BFA00757464 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,8 +37,8 @@
 		35EDEC671C33CF89008DD75C /* ColonyPopoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColonyPopoverController.swift; sourceTree = "<group>"; };
 		35EDEC691C346A4C008DD75C /* CreateColonyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateColonyController.swift; sourceTree = "<group>"; };
 		440EE2BC57B54FAFD7147ED6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BEDF7C0538CA970F48727819 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3AABED4BEF006A44E19ECB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E500F1DE8A812EAA1291571F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +46,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B78F8C64DB1B7071383FD51 /* libPods.a in Frameworks */,
+				3559BDD41C34F7BA00BC458B /* Bolts.framework in Frameworks */,
+				3559BDD51C34F7BA00BC458B /* Parse.framework in Frameworks */,
+				3559BDD61C34F7BA00BC458B /* ParseUI.framework in Frameworks */,
+				3559BDD71C34F7BA00BC458B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				35EA3F701C325BFA00757464 /* AppDelegate.swift */,
+				3559BDD81C353CE500BC458B /* AlertController.swift */,
 				35EA3F721C325BFA00757464 /* ViewController.swift */,
 				35EDEC671C33CF89008DD75C /* ColonyPopoverController.swift */,
 				35EDEC691C346A4C008DD75C /* CreateColonyController.swift */,
@@ -89,7 +102,11 @@
 		A6BA61339B44F1CE612017A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E500F1DE8A812EAA1291571F /* libPods.a */,
+				3559BDD01C34F7BA00BC458B /* Bolts.framework */,
+				3559BDD11C34F7BA00BC458B /* Parse.framework */,
+				3559BDD21C34F7BA00BC458B /* ParseUI.framework */,
+				3559BDD31C34F7BA00BC458B /* Pods.framework */,
+				BEDF7C0538CA970F48727819 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EA3F731C325BFA00757464 /* ViewController.swift in Sources */,
+				3559BDD91C353CE500BC458B /* AlertController.swift in Sources */,
 				35EDEC681C33CF89008DD75C /* ColonyPopoverController.swift in Sources */,
 				35EA3F711C325BFA00757464 /* AppDelegate.swift in Sources */,
 				35EDEC6A1C346A4C008DD75C /* CreateColonyController.swift in Sources */,
@@ -332,6 +350,10 @@
 			baseConfigurationReference = 440EE2BC57B54FAFD7147ED6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = KittyMapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KittyMapper;
@@ -344,6 +366,10 @@
 			baseConfigurationReference = CA3AABED4BEF006A44E19ECB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = KittyMapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KittyMapper;

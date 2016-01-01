@@ -6,6 +6,8 @@
 //
 //
 
+import Parse
+import Bolts
 import UIKit
 import GoogleMaps
 
@@ -18,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyAyK9pzdm37kJSzfoO1VGmjCvRio4_mmT0")
+        
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId("JtQMgCB8t5qoyIGENQ4aPIkKyz6isSods6mJIf48", clientKey: "krembDVKl1P9Znk6vMfs9Miko2P8T2ysUKcpjzXT")
         return true
     }
 

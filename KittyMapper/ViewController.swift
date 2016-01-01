@@ -13,9 +13,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     @IBOutlet weak var mapView: GMSMapView!
     
-    let locationManager = CLLocationManager()
-    
-//    @IBOutlet weak var copyright: UILabel!
+    let locationManager = CLLocationManager()    
     
     override func viewDidLoad() {
         super.viewDidLoad()
