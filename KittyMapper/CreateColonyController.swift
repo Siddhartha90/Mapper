@@ -25,7 +25,8 @@ class CreateColonyController: UIViewController, UITextFieldDelegate {
         
 //         Validate input.
         if (Int(numberOfCats!) == nil) {
-            numericError.hidden = false
+            // Re-insist error that was previously shown when leaving the text box.
+            reshowError()
             return
         }
         
@@ -44,7 +45,30 @@ class CreateColonyController: UIViewController, UITextFieldDelegate {
         if (colonyNameField.hasText() && numberOfCatsField.hasText() && addressField.hasText()) {
           doneButton.enabled = true
         }
+        else {
+        doneButton.enabled = false
+        }
+        
+        let numberOfCats = self.numberOfCatsField.text
+        if (textField.tag == 1) {
+            if (Int(numberOfCats!) == nil) {
+                numericError.hidden = false
+            }
+            else {
+                numericError.hidden = true
+            }
+        }
     }
+    
+    func reshowError() {
+        numericError.hidden = true
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "showNumericError:", userInfo: self, repeats: false)    
+    }
+    
+    func showNumericError(timer: NSTimer) {
+        numericError.hidden = false
+    }
+    
     
 //    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
 //        return .None
@@ -82,6 +106,8 @@ class CreateColonyController: UIViewController, UITextFieldDelegate {
         colonyNameField.delegate = self
         numberOfCatsField.delegate = self
         addressField.delegate = self
+        
+        numberOfCatsField.tag = 1
         
         numericError.hidden = true
         numericError.backgroundColor = UIColor.whiteColor()
